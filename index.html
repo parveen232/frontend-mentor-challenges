@@ -5,33 +5,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Frontend Mentor Challenges</title>
 
-    <style>
-        body {
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 50px;
-        }
-
-        a {
-            display: block;
-            margin: 20px;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>Frontend Mentor Challenges</h1>
+    <header>
+        <div class="primary-header">
+            <h1>Frontend Mentor Challenges</h1>
+            <div class="gh-link">
+                <a href="https://github.com/parveen232/frontend-mentor-challenges">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <a href="./product-preview-card-component-main/index.html">Product Preview Card Component</a>
-    <a href="./single-price-grid-component-master/index.html">Single price grid component</a>
-    <a href="./four-card-feature-section/index.html">Four card feature section</a>
-    <a href="./huddle-landing-page-with-single-introductory-section/index.html">Huddle landing page with a single introductory section</a>
-    <a href="./base-apparel-coming-soon/index.html">Base Apparel coming soon page</a>
-    <a href="./huddle-landing-page-with-alternating-feature-blocks/index.html">Huddle landing page with alternating feature blocks</a>
+    <main>
+        <div class="challenge-feature">
+            <span class="chal item">Challenge</span>
+            <div class="filter-container item">
+                <span>Filter by</span>
+                <ion-icon name="chevron-down-outline"></ion-icon>
+                <div class="filter" style="visibility: hidden;">
+                    <div class="diff-container filter-type">
+                        <span class="fil-span">Difficulty</span>
+                        <div class="cbox">
+                            <input type="checkbox" name="newbie" id="newbie">
+                            <label for="newbie">Newbie</label>
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="junior" id="junior">
+                            <label for="junior">Junior</label>
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="intermediate" id="intermediate">
+                            <label for="intermediate">Intermediate</label>
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="advanced" id="advanced">
+                            <label for="advanced">Advanced</label>
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="guru" id="guru">
+                            <label for="guru">Guru</label>
+                        </div>
+                    </div>
+                    <div class="lang-container-cb filter-type">
+                        <span class="fil-span">Languages</span>
+                        <div class="cbox">
+                            <input type="checkbox" name="html-css" id="html-css">
+                            <label for="html-css">HTML & CSS</label>
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="js" id="js">
+                            <label for="js">JS</label>
+                        </div>
+                        <div class="cbox">
+                            <input type="checkbox" name="api" id="api">
+                            <label for="api">API</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="challenges-container">
+            <ul class="list"></ul>
+        </div>
+    </main>
+
+
+
+    <script src="app.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

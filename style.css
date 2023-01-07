@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;700&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #36454f;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+}
+
+.primary-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 50px;
+}
+
+h1 {
+	color: #fff;
+	margin: 0;
+}
+
+.gh-link {
+	font-size: 48px;
+	padding: 10px;
+}
+
+.gh-link a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+.gh-link a:hover {
+	color: royalblue;
+}
+
+.challenge-feature {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 50px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.chal {
+	font-size: 18px;
+}
+
+.item {
+	text-transform: uppercase;
+	color: #fff;
+	padding: 15px 20px;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+.filter-container {
+	cursor: pointer;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	position: relative;
+}
+
+.filter-container:hover {
+	background-color: #474f58;
+}
+
+.filter {
+	cursor: default;
+	z-index: 1;
+	background-color: #fff;
+	color: #110d1d;
+	width: 200%;
+	position: absolute;
+	top: 100%;
+	right: 0;
+}
+
+.filter-type {
+	display: flex;
+	flex-direction: column;
+}
+
+.fil-span {
+	color: #aaaaaa;
+	background-color: #fafafa;
+	padding: 10px;
+	font-size: 18px;
+	border-bottom: 1px solid #dee7e8;
+}
+
+.cbox input {
+	cursor: pointer;
+	width: 20px;
+	aspect-ratio: 1;
+}
+
+.cbox label {
+	cursor: pointer;
+}
+
+.cbox {
+	color: #1f2224;
+	background-color: #fafafa;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	padding: 10px;
+	font-size: 18px;
+	border-bottom: 1px solid #dee7e8;
+}
+
+.challenges-container {
+	width: 1300px;
+	margin: auto;
+	max-width: 100%;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+ul li {
+	width: 370px;
+	padding: 10px;
+	margin: 20px;
+	border-radius: 1em;
+	background-color: #06191d;
+	box-shadow: 0 3px 10px rgba(255, 255, 255, 0.1);
+}
+
+.img-container {
+	border-radius: 0.5em;
+	overflow: hidden;
+	height: 210px;
+	width: 100%;
+}
+
+ul li img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+ul li img:hover {
+	transform: scale(1.1);
+}
+
+.box {
+	height: calc(100% - 220px);
+	padding: 25px 15px 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.box a {
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+}
+
+.box a:hover {
+	text-decoration: underline 2px;
+}
+
+.difficulty {
+	height: 25px;
+	display: inline-block;
+	border: 1px solid aqua;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+
+.difficulty::first-letter {
+	padding: 1px 6px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.newbie-clr {
+	border-color: royalblue;
+}
+.newbie-clr::first-letter {
+	background-color: royalblue;
+}
+
+.junior-clr {
+	border-color: Fuchsia;
+}
+.junior-clr::first-letter {
+	background-color: Fuchsia;
+}
+
+.intermediate-clr {
+	border-color: green;
+}
+.intermediate-clr::first-letter {
+	background-color: green;
+}
+
+.advanced-clr {
+	border-color: darkcyan;
+}
+.advanced-clr::first-letter {
+	background-color: darkcyan;
+}
+
+.guru-clr {
+	border-color: red;
+}
+.guru-clr::first-letter {
+	background-color: red;
+}
+
+.html-clr {
+	color: royalblue;
+}
+.css-clr {
+	color: magenta;
+}
+.js-clr {
+	color: yellow;
+}
+.api-clr {
+	color: cyan;
+}
+
+.lang-diff {
+	color: #fff;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+	margin: 25px 0 20px;
+}
+
+.lang-container {
+	display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+	font-weight: 700;
+}
+
+.links-container {
+	margin-top: auto;
+}
+
+.links-container a {
+    border-radius: 50vh;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	text-decoration: none;
+	margin-right: 5px;
+	height: 35px;
+	width: 35px;
+	transition: transform 0.3s ease;
+}
+
+.links-container a:hover {
+	border-color: royalblue;
+    color: royalblue;
+    transform: scale(1.1);
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
