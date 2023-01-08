@@ -185,3 +185,96 @@ for (const dclass of dclassList) {
         dclass.classList.add('guru-clr')
     }
 }
+
+const filterNum = [];
+
+for (const [index, cBox] of cBoxes.entries()) {
+    cBox.addEventListener('click', () => {
+        if (!filterNum.includes(index)) {
+            filterNum.push(index);
+        }
+        else {
+            const fnIndex = filterNum.indexOf(index);
+            filterNum.splice(fnIndex, 1);
+        }
+
+        const check = []
+        for (const cBox of cBoxes) {
+            if (cBox.checked && !check.includes(cBox.id)) {
+                check.push(cBox.id);
+            }
+        }
+
+        const fnSort = filterNum.sort();
+        const fnSortLen = fnSort.length;
+
+        if (fnSortLen > 0) {
+            console.log(check);
+            if (parseInt(fnSort[0]) >= 0 && parseInt(fnSort[fnSortLen - 1]) <= 4) {
+                hideorshowD(check);
+            }
+            else if (parseInt(fnSort[0]) >= 5 && parseInt(fnSort[fnSortLen - 1]) <= 7) {
+                hideorshowL(check);
+            }
+            else if (parseInt(fnSort[0]) >= 0 && parseInt(fnSort[fnSortLen - 1]) <= 7) {
+                hideorshow(check);
+            }
+            else {
+                return false;
+            }
+        }
+        else if (fnSortLen == 0) {
+            showall();
+        }
+    })
+}
+
+function showall() {
+    for (let i = 0; i < projects.length; i++) {
+        listLis[i].style.display = 'block';
+    }
+}
+
+function hideorshow(Arr) {
+    projects.forEach(({ difficulty, languages }, i) => {
+        if (Arr.includes(difficulty.slice(2).toLowerCase()) && findCommonLang(Arr, languages)) {
+            listLis[i].style.display = 'block';
+        }
+        else {
+            listLis[i].style.display = 'none';
+        }
+    })
+}
+
+function hideorshowD(Arr) {
+    projects.forEach(({ difficulty }, i) => {
+        if (Arr.includes(difficulty.slice(2).toLowerCase())) {
+            listLis[i].style.display = 'block';
+        }
+        else {
+            listLis[i].style.display = 'none';
+        }
+    })
+}
+
+function hideorshowL(Arr) {
+    projects.forEach(({ languages }, i) => {
+        if (findCommonLang(Arr, languages)) {
+            listLis[i].style.display = 'block';
+        }
+        else {
+            listLis[i].style.display = 'none';
+        }
+    })
+}
+
+function findCommonLang(arr1, arr2) {
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
