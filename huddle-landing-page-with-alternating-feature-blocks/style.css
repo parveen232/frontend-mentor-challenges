@@ -305,8 +305,12 @@ button:active {
     }
 
     .feature-card {
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding: 10%;
+    }
+
+    .feature-card:nth-child(2) {
+        flex-direction: column;
     }
 
     .feature-card img {
