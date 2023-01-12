@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-light-cyan: hsl(193, 38%, 86%);
+    --clr-neon-green: hsl(150, 100%, 66%);
+
+    --clr-grayish-blue: hsl(217, 19%, 38%);
+    --clr-dark-grayish-blue: hsl(217, 19%, 24%);
+    --clr-dark-blue: hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--clr-dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 600px;
+    position: relative;
+    background-color: var(--clr-dark-grayish-blue);
+    border-radius: 20px;
+    padding: 50px 50px 70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.aid-container {
+    color: var(--clr-neon-green);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+h1 {
+    color: var(--clr-light-cyan);
+    margin: 20px auto 40px;
+}
+
+.advice-btn {
+    cursor: pointer;
+    width: 70px;
+    aspect-ratio: 1;
+    padding: 20px;
+    border: none;
+    border-radius: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    background-color: var(--clr-neon-green);
+    transition: box-shadow 0.3s ease-out;
+}
+
+.advice-btn:hover {
+    box-shadow: 0 5px 40px var(--clr-neon-green);
+}
+
+button:focus,
+button:active {
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 50px 30px 70px;
+    }
+}

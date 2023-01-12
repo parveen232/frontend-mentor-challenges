@@ -28,6 +28,12 @@ const projects = [
         github: 'https://github.com/parveen232/frontend-mentor-challenges/tree/master/huddle-landing-page-with-alternating-feature-blocks'
     },
     {
+        name: 'advice-generator-app',
+        languages: ['html-css', 'js', 'api'],
+        difficulty: '2 Junior',
+        github: 'https://github.com/parveen232/frontend-mentor-challenges/tree/master/advice-generator-app'
+    },
+    {
         name: 'base-apparel-coming-soon',
         languages: ['html-css', 'js'],
         difficulty: '1 Newbie',
